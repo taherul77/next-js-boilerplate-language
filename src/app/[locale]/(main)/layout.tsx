@@ -1,6 +1,7 @@
 "use client";
 
 
+import Navbar from "@/components/ui/Navbar/Navbar";
 import {store} from "@/redux/Store/Store";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import React, { ReactNode } from "react";
@@ -12,7 +13,7 @@ function layout({ children }: { children: ReactNode }) {
   return (
     <Provider store={store}>
       <QueryClientProvider client={queryClient}>
-        
+      <Navbar />
         {children}
      
       </QueryClientProvider>
